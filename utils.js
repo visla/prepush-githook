@@ -3,7 +3,7 @@ var exec = require('child_process').exec;
 
 // use git rev-parse to find the .git directory
 exports.findGitRoot = function (callback) {
-    exec('git rev-parse --show-toplevel', function (err, stderr) {
+    exec('git rev-parse --git-dir', function (err, stderr) {
         if (err) {
             return callback(err);
         }

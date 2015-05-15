@@ -9,6 +9,6 @@ utils.findGitRoot(function(err, root) {
         console.error('This project doesn\'t appear to be a git repository. Skipping uninstallation...');
     } else {
         console.log('Removing .git/hooks/pre-push...');
-        fs.unlinkSync(path.join(root, '.git', 'hooks', 'pre-push'));
+        fs.unlinkSync(path.join(root, 'hooks', 'pre-push'));
     }
 });

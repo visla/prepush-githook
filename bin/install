@@ -17,7 +17,7 @@ function installHook() {
             console.error('This project doesn\'t appear to be a git repository. To enable the pre-push hook, run `git init` followed by `npm run prepush-hook install`.');
         } else {
             sourcePath = path.join(__dirname, 'pre-push');
-            destPath = path.join(root, '.git', 'hooks', 'pre-push');
+            destPath = path.join(root, 'hooks', 'pre-push');
             hooksPath = path.dirname(destPath);
 
             // GitHub desktop app reportedly does not create the hooks directory, so let's create it here.
